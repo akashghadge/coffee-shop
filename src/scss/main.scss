@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// heading comp
+.parentHead {
+    width: 100vw;
+    background-color: hsl(0, 0%, 19%);
+}
+
+.headingText {
+    background-color: inherit;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 0;
+}
+
+// hoem
+.containerShop {
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+}
+
+// stocks
+.stockMain {
+    height: 100vh;
+    background-color: rgb(255, 242, 205);
+}
+
+.stockHeadText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.stockItems {}
+
+.stockItem {
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.buttonCustomDiv {
+    text-align: center;
+}
+
+.buttonCustom {
+    width: 170px;
+    height: 45px;
+    background-color: #502507;
+}
+
+.headOrder {
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+// select box
+.selectBox {
+    width: 100%;
+}
+
+.inputBox {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.spanSugar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
