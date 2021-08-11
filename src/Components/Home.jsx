@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Heading from './Heading';
 import Order from "./Order"
 import Stock from "./Stock"
@@ -39,12 +39,69 @@ Submission deadline: 15 August, 2021
 
  */
 const Home = () => {
+    let [stocks, setStocks] = useState({
+        "water": 1000,
+        "milk": 1000,
+        "tea": 200,
+        "coffee": 200,
+        "sugar": 500
+    });
+    function changeStocks(newValue) {
+        setStocks(newValue);
+    }
+    function refill() {
+        let obj =
+        {
+            "water": 1000,
+            "milk": 1000,
+            "tea": 200,
+            "coffee": 200,
+            "sugar": 500
+        }
+        setStocks(obj);
+    }
+    let [f, setF] = useState(false);
+    function substractIngrd(newObj) {
+        console.log(newObj);
+        let temp = stocks;
+        if (newObj.sugar) {
+            temp.sugar -= (5 * parseInt(newObj.cups));
+        }
+        switch (newObj.typeOfTea) {
+            case '1':
+                temp.milk -= (10 * parseInt(newObj.cups));
+                temp.water -= (4 * parseInt(newObj.cups));
+                temp.coffee -= (8 * parseInt(newObj.cups));
+                break;
+            case '2':
+                temp.milk -= (15 * parseInt(newObj.cups));
+                temp.water -= (4 * parseInt(newObj.cups));
+                temp.coffee -= (4 * parseInt(newObj.cups));
+                break;
+            case '3':
+                temp.milk -= (10 * parseInt(newObj.cups));
+                temp.water -= (8 * parseInt(newObj.cups));
+                temp.tea -= (8 * parseInt(newObj.cups));
+                break;
+            case '4':
+                temp.milk -= (15 * parseInt(newObj.cups));
+                temp.water -= (4 * parseInt(newObj.cups));
+                temp.tea -= (4 * parseInt(newObj.cups));
+                break;
+            default:
+                break;
+        }
+        console.log(temp);
+        setStocks(temp);
+        setF(!f);
+        setF(!f);
+    }
     return (
         <>
             <Heading text="Growpartern Coffee Shop"></Heading>
             <div className="containerShop">
-                <Stock></Stock>
-                <Order></Order>
+                <Stock flag={f} stocksSupply={stocks} childRefill={refill}></Stock>
+                <Order onSubstarct={substractIngrd}></Order>
             </div>
         </>
     );

@@ -27,7 +27,7 @@
 // stocks
 .stockMain {
     height: 100vh;
-    background-color: rgb(255, 242, 205);
+    background-color: rgb(235, 224, 193);
 }
 
 .stockHeadText {
@@ -38,7 +38,6 @@
     padding: 1rem 2rem 1rem 2rem;
 }
 
-.stockItems {}
 
 .stockItem {
     text-transform: capitalize;
@@ -78,4 +77,21 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+@media (max-width:700px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    .buttonCustom {
+        width: 80px;
+        height: 30px;
+    }
+
+    .stockHeadText {
+        text-align: center;
+    }
+
 }

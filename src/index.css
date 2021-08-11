@@ -20,7 +20,7 @@
 
 .stockMain {
   height: 100vh;
-  background-color: #fff2cd; }
+  background-color: #ebe0c1; }
 
 .stockHeadText {
   font-family: Arial, Helvetica, sans-serif;
@@ -60,3 +60,12 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: capitalize; }
+
+@media (max-width: 700px) {
+  html {
+    font-size: 80%; }
+  .buttonCustom {
+    width: 80px;
+    height: 30px; }
+  .stockHeadText {
+    text-align: center; } }
